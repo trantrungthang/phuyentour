@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --main-color: #0d676a;
+    --border-radius : 25px;
+}
+
+body{
+
+}
+/* Phần banner web và menu */
+
+
+.banner{
+    padding-top: 20px;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) , url(banner.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.navbar{
+    overflow: hidden;
+    z-index: 100;
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+
+/* Sticky navbar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    z-index: 100;
+    opacity: 0.9;
+    transition: 0.5s;
+  }
+
+.sticky + .content-main{
+    padding-top: 60px;
+    width: 100%;
+}
+
+
+  
+.logo{
+    width: 120px;
+    cursor: pointer;
+
+}
+.logo img{
+    width: 150px;
+}
+.menu-items ul{
+    display: flex;
+    list-style: none;
+    color: white;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+
+}
+
+.navbar ul li ::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom:  -10px;
+    transition: 0.3s;
+
+}
+
+.navbar ul li :hover::after{
+    width:100% ;
+  
+}
+
+.nav-content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.nav-content h1{
+    font-size: 50px ;
+    margin-top: 80px;
+}
+
+.nav-content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.nav-content button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border:  2px solid var( --main-color);
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-content span{
+    background: var( --main-color);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.nav-content button:hover span{
+    width: 100%;
+}
+
+.nav-content button:hover{
+    border : none;
+}
+
+
+
+/* Nội dung trang web  */
+
+.content-main{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-detail{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.text-dt{
+    width: calc(80%/2);
+    text-align: justify;
+    margin-right: 20px;
+}
+
+
+
+.img-main{
+    width: 500px;
+    height: 350px;
+    margin-left: 50px;
+    border-radius: 45px 10px 45px 10px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.img-main img{
+    width: 100%;
+    height: 100%;
+    border: var(--main-color);
+    border-radius: 45px 10px 45px 10px;
+    box-shadow: 1px solid var( --main-color);
+    transition: transform 0.25s linear;
+    object-fit:cover;
+   
+
+}
+
+.img-main:hover img{
+    transform: scale(1.2);
+}
+
+
+
+#title{
+    text-align: left;
+    color:var( --main-color);
+    font-weight: bold;
+    font-size: 35px;
+
+ 
+}
+
+.text-dt p{
+    font-size: 17px;
+    line-height: 1.25;
+    font-family: poppins;
+}
+i{
+    display: block;
+    padding-top: 20px;
+}
+
+
+
+/* nút đăng ký */
+
+.btn{
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #fff;
+   
+}
+
+.sign-up button{
+    width: 150px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border:  3px solid var( --main-color);
+    background-color: transparent;
+    color: #fff;
+    transition: 0.5s;
+}
+.sign-up button:hover{
+    background: var(--main-color);
+}
